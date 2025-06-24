@@ -5,6 +5,7 @@ import {
   Route,
   Navigate,
 } from 'react-router-dom';
+import DashboardRouter from './DashboardRouter';
 import { AuthProvider, useAuth } from './context/AuthContext';
 import HomePage from './components/HomePage';
 import LoginForm from './components/LoginForm';
@@ -31,9 +32,7 @@ const ProtectedRoute: React.FC<{
 
 const AppRoutes: React.FC = () => {
   return (
-    import DashboardRouter from './DashboardRouter';
-
-<Routes>
+    <Routes>
       <Route path="/" element={<HomePage />} />
       <Route path="/login/student" element={<LoginForm userRole="student" />} />
       <Route path="/login/faculty" element={<LoginForm userRole="faculty" />} />
@@ -86,3 +85,4 @@ function App() {
 }
 
 export default App;
+
